@@ -1,10 +1,10 @@
 package models
 
 type Product struct {
-	Id           int64  `gorm:"primaryKey" json:"id"`
-	UUID         string `gorm:"type:uuid;default:uuid_generate_v4()" json:"uuid"`
-	ProductName  string `gorm:"type:varchar(300)" json:"product_name"`
-	ProductPrice int64  `gorm:"type:integer" json:"product_price"`
+	Id               int64  `gorm:"primaryKey" json:"id"`
+	UUID             string `gorm:"type:uuid;default:gen_random_uuid()"`
+	ProductName      string `gorm:"type:varchar(300)" json:"productName"`
+	ProductPrice     int64  `gorm:"type:integer" json:"productPrice"`
+	ProductImageName string `gorm:"type:text" json:"imageName"`
+	ProductImageURL  string `gorm:"type:text" json:"imageURL"`
 }
-
-// UUID string `gorm:"type:uuid;default:uuid_generate_v4()"`
