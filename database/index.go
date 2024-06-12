@@ -16,6 +16,10 @@ dsn := "host=localhost user=postgres password=paafff dbname=dbgolang_crud port=5
 	if err != nil {
 		panic(err)
 // return err
+
+
+
+sdasdsad
 	}
 
 	database.AutoMigrate(&models.Product{})
